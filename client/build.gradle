@@ -1,0 +1,26 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'java'
+}
+
+group 'nd.ermakov'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':common')
+}
+
+application {
+    mainClassName = 'nd.ermakov.pdris.chatservice.MainKt'
+}
+
+run {
+    standardInput = System.in
+    standardOutput = System.out
+}
